@@ -152,20 +152,20 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-primary hidden sm:block">ToolVerse</h1>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#tools" className="text-foreground hover:text-primary transition">
+          {/* Desktop Navigation *          <nav className="flex gap-6">
+            <a href="#tools" className="text-foreground/80 hover:text-primary transition-colors">
               Tools
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition">
+            <a href="/blog" className="text-foreground/80 hover:text-primary transition-colors">
+              Blog
+            </a>
+            <a href="#features" className="text-foreground/80 hover:text-primary transition-colors">
               About
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition">
+            <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">
               Contact
             </a>
-          </nav>
-
-          {/* Mobile Menu Button */}
+          </nav>     {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 hover:bg-secondary rounded-lg transition"

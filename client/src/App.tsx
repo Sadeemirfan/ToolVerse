@@ -18,6 +18,8 @@ import AIDetectorPage from "./pages/tools/AIDetector";
 import MetaGeneratorPage from "./pages/tools/MetaGenerator";
 import UnitConverterPage from "./pages/tools/UnitConverter";
 import ImageResizerPage from "./pages/tools/ImageResizer";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 
 function Router() {
@@ -37,6 +39,8 @@ function Router() {
       <Route path="/tools/meta-generator" component={MetaGeneratorPage} />
       <Route path="/tools/unit-converter" component={UnitConverterPage} />
       <Route path="/tools/image-resizer" component={ImageResizerPage} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
