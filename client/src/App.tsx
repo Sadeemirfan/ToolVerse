@@ -14,6 +14,10 @@ import JSONFormatterPage from "./pages/tools/JSONFormatter";
 import PasswordGeneratorPage from "./pages/tools/PasswordGenerator";
 import QRGeneratorPage from "./pages/tools/QRGenerator";
 import LoremIpsumPage from "./pages/tools/LoremIpsum";
+import AIDetectorPage from "./pages/tools/AIDetector";
+import MetaGeneratorPage from "./pages/tools/MetaGenerator";
+import UnitConverterPage from "./pages/tools/UnitConverter";
+import ImageResizerPage from "./pages/tools/ImageResizer";
 
 
 function Router() {
@@ -29,6 +33,10 @@ function Router() {
       <Route path="/tools/password-generator" component={PasswordGeneratorPage} />
       <Route path="/tools/qr-generator" component={QRGeneratorPage} />
       <Route path="/tools/lorem-ipsum" component={LoremIpsumPage} />
+      <Route path="/tools/ai-detector" component={AIDetectorPage} />
+      <Route path="/tools/meta-generator" component={MetaGeneratorPage} />
+      <Route path="/tools/unit-converter" component={UnitConverterPage} />
+      <Route path="/tools/image-resizer" component={ImageResizerPage} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

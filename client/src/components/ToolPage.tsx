@@ -9,6 +9,13 @@ import {
 import { ArrowLeft, Copy, Download } from "lucide-react";
 import { useLocation } from "wouter";
 import { ReactNode } from "react";
+import RelatedTools from "./RelatedTools";
+
+interface RelatedTool {
+  name: string;
+  description: string;
+  path: string;
+}
 
 interface ToolPageProps {
   toolName: string;
@@ -21,6 +28,7 @@ interface ToolPageProps {
     question: string;
     answer: string;
   }>;
+  relatedTools?: RelatedTool[];
   children: ReactNode; // Tool interface component
 }
 
@@ -32,6 +40,7 @@ export default function ToolPage({
   keywords,
   features,
   faqs,
+  relatedTools,
   children,
 }: ToolPageProps) {
   const [, navigate] = useLocation();
@@ -184,6 +193,11 @@ export default function ToolPage({
             ))}
           </div>
         </section>
+
+        {/* Related Tools */}
+        {relatedTools && relatedTools.length > 0 && (
+          <RelatedTools currentTool={toolName} tools={relatedTools} />
+        )}
       </main>
 
       {/* Footer */}

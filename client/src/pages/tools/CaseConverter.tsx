@@ -118,6 +118,12 @@ export default function CaseConverterPage() {
     },
   ];
 
+  const relatedTools = [
+    { name: "Word Counter", description: "Count words and characters", path: "/tools/word-counter" },
+    { name: "JSON Formatter", description: "Format and validate JSON", path: "/tools/json-formatter" },
+    { name: "Lorem Ipsum", description: "Generate placeholder text", path: "/tools/lorem-ipsum" },
+  ];
+
   return (
     <ToolPage
       toolName="Case Converter"
@@ -134,6 +140,7 @@ export default function CaseConverterPage() {
         "Privacy-first processing",
       ]}
       faqs={faqs}
+      relatedTools={relatedTools}
     >
       {toolInterface}
     </ToolPage>

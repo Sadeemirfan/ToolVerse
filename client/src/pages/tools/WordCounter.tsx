@@ -118,6 +118,12 @@ export default function WordCounterPage() {
     },
   ];
 
+  const relatedTools = [
+    { name: "Case Converter", description: "Convert text between different cases", path: "/tools/case-converter" },
+    { name: "Lorem Ipsum", description: "Generate placeholder text", path: "/tools/lorem-ipsum" },
+    { name: "JSON Formatter", description: "Format and validate JSON code", path: "/tools/json-formatter" },
+  ];
+
   return (
     <ToolPage
       toolName="Word Counter"
@@ -134,6 +140,7 @@ export default function WordCounterPage() {
         "No data storage or tracking",
       ]}
       faqs={faqs}
+      relatedTools={relatedTools}
     >
       {toolInterface}
     </ToolPage>

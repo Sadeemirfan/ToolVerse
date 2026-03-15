@@ -127,6 +127,12 @@ export default function JSONFormatterPage() {
     },
   ];
 
+  const relatedTools = [
+    { name: "QR Code Generator", description: "Generate QR codes instantly", path: "/tools/qr-generator" },
+    { name: "Password Generator", description: "Create strong passwords", path: "/tools/password-generator" },
+    { name: "Word Counter", description: "Count words and characters", path: "/tools/word-counter" },
+  ];
+
   return (
     <ToolPage
       toolName="JSON Formatter & Validator"
@@ -143,6 +149,7 @@ export default function JSONFormatterPage() {
         "Support for large files",
       ]}
       faqs={faqs}
+      relatedTools={relatedTools}
     >
       {toolInterface}
     </ToolPage>
