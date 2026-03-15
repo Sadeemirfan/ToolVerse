@@ -1,0 +1,25 @@
+# ToolVerse - robots.txt
+# This file tells search engines how to crawl and index our website
+
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /404
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for other bots
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://toolverse.manus.space/sitemap.xml
