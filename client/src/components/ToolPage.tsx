@@ -10,6 +10,7 @@ import { ArrowLeft, Copy, Download } from "lucide-react";
 import { useLocation } from "wouter";
 import { ReactNode } from "react";
 import RelatedTools from "./RelatedTools";
+import SocialShare from "./SocialShare";
 
 interface RelatedTool {
   name: string;
@@ -43,7 +44,8 @@ export default function ToolPage({
   relatedTools,
   children,
 }: ToolPageProps) {
-  const [, navigate] = useLocation();
+  const [location, navigate] = useLocation();
+  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
 
   return (
     <div className="min-h-screen bg-white">
@@ -115,19 +117,13 @@ export default function ToolPage({
               </div>
             </Card>
 
-            {/* Share & Download */}
+            {/* Social Share */}
             <Card className="p-6 bg-gradient-to-br from-primary/10 to-accent/10 border-0">
-              <h3 className="text-lg font-bold text-foreground mb-4">Share</h3>
-              <div className="space-y-2">
-                <Button variant="outline" size="sm" className="w-full justify-start">
-                  <Copy className="w-4 h-4 mr-2" />
-                  Copy Link
-                </Button>
-                <Button variant="outline" size="sm" className="w-full justify-start">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download
-                </Button>
-              </div>
+              <SocialShare
+                toolName={toolName}
+                toolUrl={currentUrl}
+                toolDescription={toolDescription}
+              />
             </Card>
           </div>
         </div>
