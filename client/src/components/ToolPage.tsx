@@ -204,6 +204,7 @@ export default function ToolPage({
       <footer className="bg-foreground text-white py-8 mt-12">
         <div className="container mx-auto px-4 text-center text-white/70 text-sm">
           <p>&copy; 2026 ToolVerse. All rights reserved. Built for productivity and creativity.</p>
+          <p className="mt-4 text-white/60">Designed and Developed by <span className="font-semibold text-white">Sadeem</span></p>
         </div>
       </footer>
     </div>

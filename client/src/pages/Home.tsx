@@ -379,6 +379,7 @@ export default function Home() {
           </div>
           <div className="border-t border-white/20 pt-8 text-center text-white/70 text-sm">
             <p>&copy; 2026 ToolVerse. All rights reserved. Built with ❤️ for productivity.</p>
+            <p className="mt-4 text-white/60">Designed and Developed by <span className="font-semibold text-white">Sadeem</span></p>
           </div>
         </div>
       </footer>
