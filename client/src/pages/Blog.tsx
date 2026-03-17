@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useLocation } from "wouter";
-import { Calendar, User, ArrowRight, CheckCircle } from "lucide-react";
-import { useState } from "react";
-import { toast } from "sonner";
+import { Calendar, User, ArrowRight } from "lucide-react";
 
 interface BlogPost {
   id: string;
@@ -18,21 +16,6 @@ interface BlogPost {
 
 export default function Blog() {
   const [, navigate] = useLocation();
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email || !email.includes("@")) {
-      toast.error("Please enter a valid email address");
-      return;
-    }
-    // In production, send to your email service (Mailchimp, ConvertKit, etc.)
-    setSubscribed(true);
-    toast.success("Thanks for subscribing! Check your email for confirmation.");
-    setEmail("");
-    setTimeout(() => setSubscribed(false), 3000);
-  };
 
   const blogPosts: BlogPost[] = [
     {
@@ -164,32 +147,7 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* Newsletter Section */}
-        <section className="mt-16 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-4">Stay Updated</h2>
-          <p className="text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Get the latest tips, tool updates, and productivity guides delivered to your inbox.
-          </p>
-          {subscribed ? (
-            <div className="flex items-center justify-center gap-2 text-primary font-semibold">
-              <CheckCircle className="w-5 h-5" />
-              <span>Successfully subscribed!</span>
-            </div>
-          ) : (
-            <form onSubmit={handleSubscribe} className="flex gap-2 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-4 py-2 rounded-lg border border-border bg-white text-foreground"
-              />
-              <Button type="submit" className="bg-primary hover:bg-primary/90 text-white">
-                Subscribe
-              </Button>
-            </form>
-          )}
-        </section>
+
       </main>
 
       {/* Footer */}
