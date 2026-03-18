@@ -82,44 +82,15 @@ export default function Contact() {
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             {/* Contact Information */}
             <div className="md:col-span-1">
-              <h2 className="text-2xl font-bold mb-8">Get in Touch</h2>
+              <h2 className="text-2xl font-bold mb-8">Why Contact Us?</h2>
 
-              <div className="space-y-8">
-                {/* Email */}
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Mail className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Email</h3>
-                    <p className="text-gray-600">support@toolverse.com</p>
-                    <p className="text-sm text-gray-500 mt-1">We typically respond within 24 hours</p>
-                  </div>
-                </div>
-
-                {/* Phone */}
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Phone className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-sm text-gray-500 mt-1">Monday to Friday, 9 AM - 5 PM EST</p>
-                  </div>
-                </div>
-
-                {/* Address */}
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Address</h3>
-                    <p className="text-gray-600">Online Support Only</p>
-                    <p className="text-sm text-gray-500 mt-1">Available 24/7 via email and contact form</p>
-                  </div>
-                </div>
+              <div className="space-y-6">
+                <p className="text-gray-600 leading-relaxed">
+                  Have feedback about our tools? Found a bug? Want to suggest a new feature? We'd love to hear from you!
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  Your input helps us improve ToolVerse and create better tools for everyone.
+                </p>
               </div>
 
               {/* FAQ Link */}
