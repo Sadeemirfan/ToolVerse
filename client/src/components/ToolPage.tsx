@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import SEOHead from "./SEOHead";
 import {
   Accordion,
   AccordionContent,
@@ -47,7 +48,31 @@ export default function ToolPage({
   const [location, navigate] = useLocation();
   const currentUrl = typeof window !== "undefined" ? window.location.href : "";
 
+  const toolSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: toolName,
+    description: toolDescription,
+    url: currentUrl,
+    applicationCategory: "Utility",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    keywords: keywords.join(", "),
+  };
+
   return (
+    <>
+      <SEOHead
+        title={toolName}
+        description={toolDescription}
+        keywords={keywords}
+        url={currentUrl}
+        type="tool"
+        schema={toolSchema}
+      />
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-border shadow-sm sticky top-0 z-40">
@@ -204,5 +229,6 @@ export default function ToolPage({
         </div>
       </footer>
     </div>
+    </>
   );
 }

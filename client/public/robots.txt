@@ -22,4 +22,4 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://toolverse.manus.space/sitemap.xml
+Sitemap: https://my-toolverse.netlify.app/sitemap.xml

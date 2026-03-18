@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
+import { HelmetProvider } from "react-helmet-async";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -18,6 +19,8 @@ import AIDetectorPage from "./pages/tools/AIDetector";
 import MetaGeneratorPage from "./pages/tools/MetaGenerator";
 import UnitConverterPage from "./pages/tools/UnitConverter";
 import ImageResizerPage from "./pages/tools/ImageResizer";
+import RobotsGeneratorPage from "./pages/tools/RobotsGenerator";
+import SitemapGeneratorPage from "./pages/tools/SitemapGenerator";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
@@ -40,6 +43,8 @@ function Router() {
       <Route path="/tools/meta-generator" component={MetaGeneratorPage} />
       <Route path="/tools/unit-converter" component={UnitConverterPage} />
       <Route path="/tools/image-resizer" component={ImageResizerPage} />
+      <Route path="/tools/robots-generator" component={RobotsGeneratorPage} />
+      <Route path="/tools/sitemap-generator" component={SitemapGeneratorPage} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/contact" component={Contact} />
@@ -58,15 +63,17 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
-      </ThemeProvider>
+      <HelmetProvider>
+        <ThemeProvider
+          defaultTheme="light"
+          // switchable
+        >
+          <TooltipProvider>
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </ThemeProvider>
+      </HelmetProvider>
     </ErrorBoundary>
   );
 }
