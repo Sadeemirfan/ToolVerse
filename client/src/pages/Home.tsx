@@ -159,6 +159,9 @@ export default function Home() {
             <a href="/blog" className="text-foreground/80 hover:text-primary transition-colors">
               Blog
             </a>
+            <a href="/contact" className="text-foreground/80 hover:text-primary transition-colors">
+              Contact
+            </a>
             <a href="#features" className="text-foreground/80 hover:text-primary transition-colors">
               About
             </a>

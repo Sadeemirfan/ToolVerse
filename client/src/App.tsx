@@ -20,6 +20,7 @@ import UnitConverterPage from "./pages/tools/UnitConverter";
 import ImageResizerPage from "./pages/tools/ImageResizer";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Contact from "./pages/Contact";
 
 
 function Router() {
@@ -41,6 +42,7 @@ function Router() {
       <Route path="/tools/image-resizer" component={ImageResizerPage} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
+      <Route path="/contact" component={Contact} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
