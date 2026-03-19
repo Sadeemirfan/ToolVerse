@@ -3,42 +3,97 @@
 
 // 1. AI Content Detector
 export const analyzeAIContent = (text: string): { isAI: number; confidence: number } => {
-  // Simplified AI detection based on patterns
-  // In production, this would use a more sophisticated ML model
-  const patterns = {
-    aiIndicators: [
-      /\b(however|moreover|furthermore|in conclusion|therefore)\b/gi,
-      /\b(it is important to note|it should be noted|it can be argued)\b/gi,
-      /\b(as mentioned|as discussed|as stated)\b/gi,
-      /\b(the aforementioned|the aforementioned|aforementioned)\b/gi,
-    ],
-    humanIndicators: [
-      /\b(I think|I believe|I feel|in my opinion|I guess)\b/gi,
-      /\b(lol|haha|omg|wow|seriously)\b/gi,
-      /\b(you know|like|actually|basically|literally)\b/gi,
-      /[!]{2,}|[\?]{2,}/g, // Multiple exclamation marks or question marks
-    ],
-  };
+  if (!text.trim()) return { isAI: 0, confidence: 0 };
 
-  let aiScore = 0;
-  let humanScore = 0;
+  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+  const words = text.toLowerCase().match(/\b\w+\b/g) || [];
+  
+  if (words.length < 10) {
+    return { isAI: 50, confidence: 10 }; // Not enough data
+  }
 
-  patterns.aiIndicators.forEach((pattern) => {
-    const matches = text.match(pattern);
-    aiScore += matches ? matches.length : 0;
+  // 1. Vocabulary Analysis (ChatGPT-isms & Humanisms)
+  const aiBuzzwords = [
+    "delve", "tapestry", "seamlessly", "furthermore", "moreover", "in conclusion",
+    "testament", "crucial", "robust", "navigating", "landscape", "vital", "multifaceted",
+    "underscore", "embark", "realm", "profound", "intricate", "paradigm", "leverage",
+    "transformative", "comprehensive", "foster", "catalyst", "dynamic", "notably", "it is important to note"
+  ];
+  
+  const humanWords = [
+    "i", "me", "my", "we", "our", "us", "think", "guess", "feel", "maybe", "probably",
+    "actually", "honestly", "literally", "basically", "pretty sure", "yeah", "stuff",
+    "things", "anyway", "like", "lol", "kinda", "sorta", "totally", "wow", "omg"
+  ];
+
+  let aiWordCount = 0;
+  let humanWordCount = 0;
+
+  words.forEach(word => {
+    if (aiBuzzwords.includes(word)) aiWordCount += 1.5;
+    if (humanWords.includes(word)) humanWordCount += 1.5;
   });
 
-  patterns.humanIndicators.forEach((pattern) => {
-    const matches = text.match(pattern);
-    humanScore += matches ? matches.length : 0;
+  // Calculate phrases (2-3 words)
+  const textLower = text.toLowerCase();
+  if (textLower.includes("in summary")) aiWordCount += 2;
+  if (textLower.includes("it should be noted")) aiWordCount += 2;
+  if (textLower.includes("in today's digital age")) aiWordCount += 3;
+  if (textLower.includes("in conclusion,")) aiWordCount += 3;
+  if (textLower.includes("in my opinion")) humanWordCount += 2;
+
+  // 2. Burstiness (Sentence Length Variation)
+  // AI tends to have consistent sentence lengths. Humans vary from very short to very long.
+  const sentenceLengths = sentences.map(s => (s.match(/\b\w+\b/g) || []).length);
+  const avgLen = sentenceLengths.reduce((a, b) => a + b, 0) / sentenceLengths.length;
+  
+  let variance = 0;
+  sentenceLengths.forEach(len => {
+    variance += Math.pow(len - avgLen, 2);
   });
+  const stdDev = Math.sqrt(variance / sentenceLengths.length);
+  const burstinessScore = stdDev / avgLen; // Coefficient of variation
 
-  const total = aiScore + humanScore;
-  const aiPercentage = total > 0 ? (aiScore / total) * 100 : 50;
+  // 3. Lexical Diversity (Unique words)
+  const uniqueWords = new Set(words).size;
+  const lexicalDiversity = uniqueWords / words.length;
 
+  // Scoring Logic
+  let aiProbability = 50; // Starting baseline
+
+  // Factor 1: Buzzword ratio
+  const vocabTotal = aiWordCount + humanWordCount;
+  if (vocabTotal > 0) {
+    const aiVocabRatio = aiWordCount / vocabTotal;
+    aiProbability += (aiVocabRatio - 0.5) * 40; // Max impact: ±20
+  }
+
+  // Factor 2: Burstiness
+  // High burstiness (> 0.6) = Human. Low burstiness (< 0.4) = AI.
+  if (burstinessScore < 0.35) aiProbability += 25;
+  else if (burstinessScore < 0.45) aiProbability += 10;
+  else if (burstinessScore > 0.65) aiProbability -= 20;
+  else if (burstinessScore > 0.8) aiProbability -= 30;
+
+  // Factor 3: Lexical Diversity
+  // AI usually has medium diversity (0.4 - 0.6). Humans can be very high or very low.
+  if (lexicalDiversity > 0.7) aiProbability -= 15; // Very diverse = Human
+  if (lexicalDiversity < 0.35) aiProbability -= 10; // Very repetitive = Usually human
+
+  // Factor 4: Formatting
+  // AI loves using lots of colons, bullet points, and perfectly crafted lists
+  const colonCount = text.split(":").length - 1;
+  if (colonCount > 2 && words.length < 200) aiProbability += 15;
+
+  // Constrain bounds
+  aiProbability = Math.max(1, Math.min(99, Math.round(aiProbability)));
+
+  // Confidence based on text length
+  let confidence = Math.min(words.length / 3, 95); 
+  
   return {
-    isAI: Math.round(aiPercentage),
-    confidence: Math.min(total / 10, 100),
+    isAI: aiProbability,
+    confidence: Math.round(confidence),
   };
 };
 

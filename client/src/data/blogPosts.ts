@@ -397,38 +397,272 @@ Lorem Ipsum remains the standard placeholder text in design because it effective
     category: "Image Tools",
     content: `# Image Optimization for Web: Reduce File Size Without Losing Quality
 
-Image optimization is crucial for website performance. Large image files slow down page loading, hurt SEO rankings, and frustrate users. Learning to optimize images effectively improves your website's speed, search engine visibility, and user experience.
+Image optimization is crucial for website performance. Large image files slow down page loading, hurt SEO rankings, and frustrate users.
 
 ## Why Image Optimization Matters
 
-Page speed is a critical ranking factor for Google. Large images are often the biggest contributor to slow page load times. Optimized images load faster, improve user experience, and reduce bounce rates. For mobile users with limited bandwidth, optimized images are essential for usability.
+Page speed is a critical ranking factor for Google. Large images are often the biggest contributor to slow page load times. Optimized images load faster, improve user experience, and reduce bounce rates.
 
 ## Image File Formats
 
-JPEG is ideal for photographs and complex images with many colors. PNG is better for graphics, logos, and images requiring transparency. WebP is a modern format that provides better compression than JPEG and PNG. Choose the right format based on your image type and requirements.
+JPEG is ideal for photographs and complex images with many colors. PNG is better for graphics, logos, and images requiring transparency. WebP is a modern format that provides better compression than JPEG and PNG.
 
 ## Image Compression Techniques
 
-Lossy compression reduces file size by removing some image data, which is acceptable for photographs. Lossless compression reduces file size without removing data, which is better for graphics and logos. The right compression level depends on your image type and quality requirements.
+Lossy compression reduces file size by removing some image data. Lossless compression reduces file size without removing data. The right compression level depends on your image type and quality requirements.
 
 ## Resizing Images
 
-Serve images at the size they'll be displayed at on your website. Don't upload a 4000x3000 image if it will be displayed at 400x300. Resizing reduces file size significantly while maintaining visual quality. Use responsive images to serve different sizes for different devices.
+Serve images at the size they will be displayed at on your website. Don't upload a 4000x3000 image if it will be displayed at 400x300. Resizing reduces file size significantly while maintaining visual quality.
 
 ## Using an Image Resizer Tool
 
-An image resizer tool allows you to quickly resize and compress images without technical knowledge. Simply upload your image, specify the desired size and format, and download the optimized version. This saves time compared to using complex image editing software.
-
-## Advanced Optimization Techniques
-
-Use image CDNs to serve images from servers closest to your users. Implement lazy loading to load images only when users scroll to them. Use modern image formats like WebP with fallbacks for older browsers. Optimize images for different screen sizes and resolutions.
-
-## Testing Image Performance
-
-Use Google PageSpeed Insights to identify image optimization opportunities. Test page load times before and after optimization. Monitor image file sizes to ensure they stay optimized. Use tools like ImageOptim or TinyPNG for additional compression.
+An image resizer tool allows you to quickly resize and compress images without technical knowledge. Simply upload your image, specify the desired size, and download the optimized version.
 
 ## Conclusion
 
 Image optimization is a simple but effective way to improve your website's performance and SEO. By using the right tools and techniques, you can significantly reduce image file sizes while maintaining visual quality.`
+  },
+  {
+    id: "base64-encoding-guide",
+    title: "Base64 Encoding Explained: What It Is and When to Use It",
+    excerpt: "Learn what Base64 encoding is, why developers use it, and how to encode and decode data online for free.",
+    date: "2026-03-19",
+    readTime: 7,
+    category: "Developer Tools",
+    content: `# Base64 Encoding Explained: What It Is and When to Use It
+
+Base64 is one of the most misunderstood concepts in web development. Many developers encounter it daily — in API responses, image embedding, and authentication headers — but few understand what it actually is.
+
+## What is Base64 Encoding?
+
+Base64 is a binary-to-text encoding scheme that converts binary data into a string of ASCII characters. It uses a set of 64 characters (A-Z, a-z, 0-9, +, /) to represent data, with "=" used as padding.
+
+### Why 64 Characters?
+
+The number 64 was chosen because it can be represented using exactly 6 bits. This makes it highly efficient for systems that only safely transmit ASCII text.
+
+## When Should You Use Base64?
+
+### Embedding Images in HTML or CSS
+Instead of linking to an external image file, you can embed the image directly using Base64:
+
+\`\`\`html
+<img src="data:image/png;base64,iVBORw0KGgo..." />
+\`\`\`
+
+### API Authentication
+HTTP Basic Authentication encodes credentials in Base64:
+\`Authorization: Basic dXNlcjpwYXNzd29yZA==\`
+
+### Storing Binary Data in JSON
+JSON is text-based. Base64 lets you safely store binary files (images, PDFs) inside JSON fields.
+
+## Is Base64 Encryption?
+
+**No.** This is the most common misconception. Base64 is **encoding**, not **encryption**. Anyone can decode it instantly. Never use it to protect sensitive information.
+
+## Base64 vs Base64URL
+
+Standard Base64 uses '+' and '/', which conflict with URLs. Base64URL replaces them with '-' and '_' for safe use in query strings and JWT tokens.
+
+## Conclusion
+
+Base64 is an essential encoding technique for modern web development. Use our free Base64 Encoder/Decoder tool to instantly convert any text or data — no sign-up required.`
+  },
+  {
+    id: "regex-guide-beginners",
+    title: "Regular Expressions (Regex) for Beginners: A Practical Guide",
+    excerpt: "Learn how to write and test regular expressions with real-world examples. A beginner-friendly regex guide with practical patterns.",
+    date: "2026-03-19",
+    readTime: 10,
+    category: "Developer Tools",
+    content: `# Regular Expressions (Regex) for Beginners: A Practical Guide
+
+Regular expressions — commonly called "regex" — are one of the most powerful tools in a developer's toolkit. Once you understand them, you'll find uses for regex everywhere.
+
+## What is a Regular Expression?
+
+A regular expression is a sequence of characters that defines a search pattern. Regex is used to search, match, replace, and validate text across all major programming languages.
+
+## Basic Regex Syntax
+
+### Literals
+The simplest regex is just a word: \`hello\` matches the exact string "hello".
+
+### Character Classes
+- \`[abc]\` — matches a, b, or c
+- \`[a-z]\` — matches any lowercase letter
+- \`[0-9]\` — matches any digit
+- \`\\d\` — shorthand for \`[0-9]\`
+- \`\\w\` — matches word characters (letters, digits, underscore)
+- \`\\s\` — matches whitespace
+
+### Quantifiers
+- \`*\` — 0 or more
+- \`+\` — 1 or more
+- \`?\` — 0 or 1 (optional)
+- \`{3}\` — exactly 3
+- \`{2,5}\` — between 2 and 5
+
+### Anchors
+- \`^\` — start of string
+- \`$\` — end of string
+
+## Practical Regex Patterns
+
+### Email Validation
+\`[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\`
+
+### Phone Number
+\`\\+?[\\d\\s\\-()]{7,15}\`
+
+### URL Detection
+\`https?:\\/\\/[^\\s]+\`
+
+### Extract Numbers
+\`\\d+\`
+
+## Common Flags
+
+- \`g\` — global (find all matches, not just the first)
+- \`i\` — case-insensitive
+- \`m\` — multiline (^ and $ match line boundaries)
+
+## Testing Regex Without Code
+
+You don't need to open a code editor to test regex. Use our free **Regex Tester** tool. Simply enter your pattern, add flags, paste your test string, and see all matches highlighted in real time.
+
+## Conclusion
+
+Regular expressions take time to learn but pay off enormously. Start with simple patterns, test them with our Regex Tester, and gradually build your skills.`
+  },
+  {
+    id: "sha-hashing-explained",
+    title: "SHA Hashing Explained: SHA-256, SHA-512 and Why They Matter",
+    excerpt: "Understand what SHA hashing is, how SHA-256 and SHA-512 work, and why cryptographic hashes are essential for security.",
+    date: "2026-03-19",
+    readTime: 8,
+    category: "Developer Tools",
+    content: `# SHA Hashing Explained: SHA-256, SHA-512, and Why They Matter
+
+Cryptographic hash functions are the backbone of modern internet security. You encounter them every day — in blockchain, HTTPS, file verification, and password storage — often without realizing it.
+
+## What is a Hash Function?
+
+A hash function takes an input of any length and produces a fixed-length output called a "hash" or "digest." The output always has the same size regardless of input length.
+
+### Key Properties of Cryptographic Hashes
+
+1. **Deterministic**: The same input always produces the same output
+2. **One-way**: You cannot reverse a hash to get the original input
+3. **Avalanche effect**: A tiny change in input produces a completely different hash
+4. **Collision resistant**: It is computationally infeasible to find two inputs with the same hash
+
+## SHA: Secure Hash Algorithm
+
+SHA stands for Secure Hash Algorithm. It is a family of cryptographic hash functions published by NIST.
+
+### SHA-256
+
+SHA-256 produces a 256-bit (32-byte) hash, displayed as a 64-character hexadecimal string. It is the most widely used hash function in the world.
+
+**Use cases:**
+- Bitcoin and most blockchain networks
+- SSL/TLS certificates
+- Code signing and software verification
+- Password hashing (combined with a salt)
+
+### SHA-512
+
+SHA-512 produces a 512-bit hash. It is slower but offers a larger output for systems requiring extreme security.
+
+## SHA vs MD5
+
+MD5 was once the standard but is now considered **broken** — collisions have been found. Never use MD5 for security purposes. Use SHA-256 or SHA-512 instead.
+
+## Hashing vs Encryption
+
+| Hashing | Encryption |
+|---------|------------|
+| One-way | Two-way (reversible) |
+| No key needed | Requires a key |
+| Fixed output size | Variable output size |
+| Verification | Data protection |
+
+## Generate Hashes Instantly
+
+Use our free **Hash Generator** to compute SHA-1, SHA-256, SHA-384, and SHA-512 hashes for any text directly in your browser. Your data never leaves your device.
+
+## Conclusion
+
+Understanding hash functions is essential for any developer working with security, authentication, or data integrity. They are simple to use but powerful in protection.`
+  },
+  {
+    id: "css-minification-performance",
+    title: "CSS Minification: How to Speed Up Your Website with Smaller Stylesheets",
+    excerpt: "Learn how CSS minification reduces file size, improves page load speed, and boosts your SEO rankings. Plus, a free tool to do it instantly.",
+    date: "2026-03-19",
+    readTime: 7,
+    category: "Developer Tools",
+    content: `# CSS Minification: How to Speed Up Your Website with Smaller Stylesheets
+
+Website performance is directly tied to your CSS file size. Bloated stylesheets slow down page rendering and hurt your Core Web Vitals scores. CSS minification is one of the quickest wins in web performance optimization.
+
+## What is CSS Minification?
+
+CSS minification removes all unnecessary characters from CSS code without changing its functionality. This includes:
+
+- Whitespace (spaces, tabs, newlines)
+- Comments (\`/* ... */\`)
+- Redundant semicolons before closing braces
+- Unnecessary spaces around colons and selectors
+
+### Before Minification
+\`\`\`css
+/* Header styles */
+.header {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0 auto;
+}
+\`\`\`
+
+### After Minification
+\`\`\`css
+.header{background-color:#ffffff;padding:20px;margin:0 auto}
+\`\`\`
+
+## Why Does It Matter for Performance?
+
+### 1. Faster Download Times
+Smaller files transfer faster over the network. On mobile connections, this is critical.
+
+### 2. Better Core Web Vitals
+Google uses Core Web Vitals — including Largest Contentful Paint (LCP) — as ranking factors. Faster CSS parsing and loading improves LCP scores directly.
+
+### 3. Reduced Server Bandwidth
+Less data transferred means lower hosting costs, especially at scale.
+
+## How Much Can You Save?
+
+Typical CSS files see **20–40% reduction** in size after minification. Files with heavy commenting and formatting can see savings of 50% or more.
+
+## When to Minify and When to Beautify
+
+| Situation | Action |
+|-----------|--------|
+| Development | Keep CSS readable (beautified) |
+| Production | Minify for performance |
+| Debugging minified CSS | Beautify to read it |
+| Received obfuscated CSS | Beautify to understand it |
+
+## Automate It in Your Build Pipeline
+
+Modern build tools like Vite, Webpack, and Rollup can automatically minify CSS during the production build. For quick one-off tasks, use our free **CSS Minifier & Beautifier** tool.
+
+## Conclusion
+
+CSS minification is a simple step that delivers measurable performance improvements. It costs nothing and takes seconds with the right tool. Optimize your stylesheets today and see the difference in your PageSpeed Insights score.`
   }
 ];

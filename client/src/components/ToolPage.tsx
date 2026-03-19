@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import SEOHead from "./SEOHead";
+import Layout from "./Layout";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ArrowLeft, Copy, Download } from "lucide-react";
+import { Copy, Download } from "lucide-react";
 import { useLocation } from "wouter";
 import { ReactNode } from "react";
 import RelatedTools from "./RelatedTools";
@@ -73,22 +74,7 @@ export default function ToolPage({
         type="tool"
         schema={toolSchema}
       />
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white border-b border-border shadow-sm sticky top-0 z-40">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Button
-            variant="ghost"
-            onClick={() => navigate("/")}
-            className="flex items-center gap-2 text-primary hover:text-primary/80"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back
-          </Button>
-          <h1 className="text-xl font-bold text-primary hidden sm:block">{toolName}</h1>
-          <div className="w-10"></div>
-        </div>
-      </header>
+    <Layout variant="page" title={toolName}>
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
@@ -221,14 +207,7 @@ export default function ToolPage({
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="bg-foreground text-white py-8 mt-12">
-        <div className="container mx-auto px-4 text-center text-white/70 text-sm">
-          <p>&copy; 2026 ToolVerse. All rights reserved. Built for productivity and creativity.</p>
-          <p className="mt-4 text-white/60">Designed and Developed by <span className="font-semibold text-white">Sadeem</span></p>
-        </div>
-      </footer>
-    </div>
+      </Layout>
     </>
   );
 }

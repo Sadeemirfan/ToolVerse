@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SEOHead from "@/components/SEOHead";
+import Layout from "@/components/Layout";
 import {
   Zap,
   FileText,
@@ -15,9 +16,15 @@ import {
   BookOpen,
   Image,
   Search,
-  Menu,
-  X,
   Map,
+  Pipette,
+  Binary,
+  Link2,
+  Clock,
+  Shield,
+  Code2,
+  Volume2,
+  Receipt,
 } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -33,120 +40,37 @@ interface Tool {
 }
 
 const tools: Tool[] = [
-  {
-    id: "ai-detector",
-    name: "AI Content Detector",
-    description: "Detect if text is AI-generated or human-written",
-    icon: <Zap className="w-8 h-8" />,
-    category: "SEO Tools",
-    keywords: "AI detector, GPT detector, content checker",
-    href: "/tools/ai-detector",
-  },
-  {
-    id: "meta-generator",
-    name: "SEO Meta Tag Generator",
-    description: "Create optimized meta titles and descriptions",
-    icon: <FileText className="w-8 h-8" />,
-    category: "SEO Tools",
-    keywords: "Meta tags, SEO, title generator",
-    href: "/tools/meta-generator",
-  },
-  {
-    id: "word-counter",
-    name: "Word Counter",
-    description: "Count words, characters, and paragraphs instantly",
-    icon: <BarChart3 className="w-8 h-8" />,
-    category: "Text Tools",
-    keywords: "Word counter, character counter",
-    href: "/tools/word-counter",
-  },
-  {
-    id: "case-converter",
-    name: "Case Converter",
-    description: "Convert text between uppercase, lowercase, and more",
-    icon: <Type className="w-8 h-8" />,
-    category: "Text Tools",
-    keywords: "Case converter, text converter",
-    href: "/tools/case-converter",
-  },
-  {
-    id: "json-formatter",
-    name: "JSON Formatter",
-    description: "Format and validate JSON code instantly",
-    icon: <Code className="w-8 h-8" />,
-    category: "Developer Tools",
-    keywords: "JSON formatter, validator, beautifier",
-    href: "/tools/json-formatter",
-  },
-  {
-    id: "password-generator",
-    name: "Password Generator",
-    description: "Generate secure, customizable passwords",
-    icon: <Lock className="w-8 h-8" />,
-    category: "Utility Tools",
-    keywords: "Password generator, secure password",
-    href: "/tools/password-generator",
-  },
-  {
-    id: "unit-converter",
-    name: "Unit Converter",
-    description: "Convert between length, weight, temperature, and more",
-    icon: <Ruler className="w-8 h-8" />,
-    category: "Utility Tools",
-    keywords: "Unit converter, length, weight, temperature",
-    href: "/tools/unit-converter",
-  },
-  {
-    id: "qr-generator",
-    name: "QR Code Generator",
-    description: "Create QR codes from URLs and text",
-    icon: <QrCode className="w-8 h-8" />,
-    category: "Developer Tools",
-    keywords: "QR code generator, QR code maker",
-    href: "/tools/qr-generator",
-  },
-  {
-    id: "lorem-ipsum",
-    name: "Lorem Ipsum Generator",
-    description: "Generate placeholder text for designs",
-    icon: <BookOpen className="w-8 h-8" />,
-    category: "Text Tools",
-    keywords: "Lorem ipsum, placeholder text",
-    href: "/tools/lorem-ipsum",
-  },
-  {
-    id: "image-resizer",
-    name: "Image Resizer",
-    description: "Resize and compress images online",
-    icon: <Image className="w-8 h-8" />,
-    category: "Utility Tools",
-    keywords: "Image resizer, compressor, resize",
-    href: "/tools/image-resizer",
-  },
-  {
-    id: "robots-generator",
-    name: "Robots.txt Generator",
-    description: "Generate optimized robots.txt files for SEO",
-    icon: <FileText className="w-8 h-8" />,
-    category: "SEO Tools",
-    keywords: "Robots.txt, SEO, crawling, indexing",
-    href: "/tools/robots-generator",
-  },
-  {
-    id: "sitemap-generator",
-    name: "Sitemap Generator",
-    description: "Create XML sitemaps for search engines",
-    icon: <Map className="w-8 h-8" />,
-    category: "SEO Tools",
-    keywords: "Sitemap, sitemap.xml, SEO, indexing",
-    href: "/tools/sitemap-generator",
-  },
+  // ── Existing 12 tools ──
+  { id: "ai-detector", name: "AI Content Detector", description: "Detect if text is AI-generated or human-written", icon: <Zap className="w-8 h-8" />, category: "SEO Tools", keywords: "AI detector, GPT detector, content checker", href: "/tools/ai-detector" },
+  { id: "meta-generator", name: "SEO Meta Tag Generator", description: "Create optimized meta titles and descriptions", icon: <FileText className="w-8 h-8" />, category: "SEO Tools", keywords: "Meta tags, SEO, title generator", href: "/tools/meta-generator" },
+  { id: "word-counter", name: "Word Counter", description: "Count words, characters, and paragraphs instantly", icon: <BarChart3 className="w-8 h-8" />, category: "Text Tools", keywords: "Word counter, character counter", href: "/tools/word-counter" },
+  { id: "case-converter", name: "Case Converter", description: "Convert text between uppercase, lowercase, and more", icon: <Type className="w-8 h-8" />, category: "Text Tools", keywords: "Case converter, text converter", href: "/tools/case-converter" },
+  { id: "json-formatter", name: "JSON Formatter", description: "Format and validate JSON code instantly", icon: <Code className="w-8 h-8" />, category: "Developer Tools", keywords: "JSON formatter, validator, beautifier", href: "/tools/json-formatter" },
+  { id: "password-generator", name: "Password Generator", description: "Generate secure, customizable passwords", icon: <Lock className="w-8 h-8" />, category: "Utility Tools", keywords: "Password generator, secure password", href: "/tools/password-generator" },
+  { id: "unit-converter", name: "Unit Converter", description: "Convert between length, weight, temperature, and more", icon: <Ruler className="w-8 h-8" />, category: "Utility Tools", keywords: "Unit converter, length, weight, temperature", href: "/tools/unit-converter" },
+  { id: "qr-generator", name: "QR Code Generator", description: "Create QR codes from URLs and text", icon: <QrCode className="w-8 h-8" />, category: "Developer Tools", keywords: "QR code generator, QR code maker", href: "/tools/qr-generator" },
+  { id: "lorem-ipsum", name: "Lorem Ipsum Generator", description: "Generate placeholder text for designs", icon: <BookOpen className="w-8 h-8" />, category: "Text Tools", keywords: "Lorem ipsum, placeholder text", href: "/tools/lorem-ipsum" },
+  { id: "image-resizer", name: "Image Resizer", description: "Resize and compress images online", icon: <Image className="w-8 h-8" />, category: "Utility Tools", keywords: "Image resizer, compressor, resize", href: "/tools/image-resizer" },
+  { id: "robots-generator", name: "Robots.txt Generator", description: "Generate optimized robots.txt files for SEO", icon: <FileText className="w-8 h-8" />, category: "SEO Tools", keywords: "Robots.txt, SEO, crawling, indexing", href: "/tools/robots-generator" },
+  { id: "sitemap-generator", name: "Sitemap Generator", description: "Create XML sitemaps for search engines", icon: <Map className="w-8 h-8" />, category: "SEO Tools", keywords: "Sitemap, sitemap.xml, SEO, indexing", href: "/tools/sitemap-generator" },
+
+  // ── 10 New Tools ──
+  { id: "color-picker", name: "Color Picker & Palette", description: "Pick colors and generate beautiful palettes instantly", icon: <Pipette className="w-8 h-8" />, category: "Developer Tools", keywords: "color picker, hex color, rgb, hsl, palette generator", href: "/tools/color-picker" },
+  { id: "base64", name: "Base64 Encoder / Decoder", description: "Encode or decode Base64 strings instantly", icon: <Binary className="w-8 h-8" />, category: "Developer Tools", keywords: "base64 encoder, base64 decoder, encode decode", href: "/tools/base64" },
+  { id: "url-encoder", name: "URL Encoder / Decoder", description: "Encode or decode URLs and query parameters", icon: <Link2 className="w-8 h-8" />, category: "Developer Tools", keywords: "url encoder, url decoder, percent encoding", href: "/tools/url-encoder" },
+  { id: "markdown-editor", name: "Markdown Editor", description: "Write Markdown with a live side-by-side preview", icon: <FileText className="w-8 h-8" />, category: "Text Tools", keywords: "markdown editor, markdown preview, live markdown", href: "/tools/markdown-editor" },
+  { id: "regex-tester", name: "Regex Tester", description: "Test and debug regular expressions in real time", icon: <Search className="w-8 h-8" />, category: "Developer Tools", keywords: "regex tester, regular expression, regex debugger", href: "/tools/regex-tester" },
+  { id: "timestamp-converter", name: "Timestamp Converter", description: "Convert Unix timestamps to readable dates and back", icon: <Clock className="w-8 h-8" />, category: "Utility Tools", keywords: "timestamp converter, unix timestamp, epoch converter", href: "/tools/timestamp-converter" },
+  { id: "hash-generator", name: "Hash Generator", description: "Generate SHA-256, SHA-512 and more cryptographic hashes", icon: <Shield className="w-8 h-8" />, category: "Developer Tools", keywords: "hash generator, sha256, sha512, checksum", href: "/tools/hash-generator" },
+  { id: "css-minifier", name: "CSS Minifier & Beautifier", description: "Minify or beautify CSS to optimize your stylesheets", icon: <Code2 className="w-8 h-8" />, category: "Developer Tools", keywords: "css minifier, css beautifier, compress css, format css", href: "/tools/css-minifier" },
+  { id: "text-to-speech", name: "Text to Speech", description: "Convert text to audio with adjustable speed and pitch", icon: <Volume2 className="w-8 h-8" />, category: "Utility Tools", keywords: "text to speech, tts, read aloud, voice generator", href: "/tools/text-to-speech" },
+  { id: "invoice-generator", name: "Invoice Generator", description: "Create and download professional invoices as PDF", icon: <Receipt className="w-8 h-8" />, category: "Utility Tools", keywords: "invoice generator, free invoice maker, pdf invoice", href: "/tools/invoice-generator" },
 ];
 
 const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools"];
 
+
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [, navigate] = useLocation();
@@ -182,46 +106,7 @@ export default function Home() {
         url="https://my-toolverse.netlify.app"
         schema={homepageSchema}
       />
-      <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
-          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h1 className="text-2xl font-bold text-primary hidden sm:block">ToolVerse</h1>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 hover:bg-secondary rounded-lg transition"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {mobileMenuOpen && (
-            <div className="md:hidden border-t border-border bg-white">
-              <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
-                <a href="#tools" className="text-foreground hover:text-primary transition">
-                  Tools
-                </a>
-                <a href="/about" className="text-foreground hover:text-primary transition">
-                  About
-                </a>
-                <a href="/contact" className="text-foreground hover:text-primary transition">
-                  Contact
-                </a>
-                <a href="/blog" className="text-foreground hover:text-primary transition">
-                  Blog
-                </a>
-              </nav>
-            </div>
-          )}
-        </header>
+      <Layout variant="home">
 
         {/* Hero Section */}
         <section
@@ -374,48 +259,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-foreground text-white py-12">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-              <div>
-                <h3 className="font-bold text-lg mb-4">ToolVerse</h3>
-                <p className="text-white/70 text-sm">
-                  Your all-in-one digital toolbox for productivity, SEO, and development.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4">Tools</h4>
-                <ul className="space-y-2 text-sm text-white/70">
-                  <li><a href="/tools/ai-detector" className="hover:text-white transition">AI Detector</a></li>
-                  <li><a href="/tools/meta-generator" className="hover:text-white transition">Meta Generator</a></li>
-                  <li><a href="/tools/word-counter" className="hover:text-white transition">Word Counter</a></li>
-                  <li><a href="/tools/json-formatter" className="hover:text-white transition">JSON Formatter</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4">Company</h4>
-                <ul className="space-y-2 text-sm text-white/70">
-                  <li><a href="/about" className="hover:text-white transition">About Us</a></li>
-                  <li><a href="/blog" className="hover:text-white transition">Blog</a></li>
-                  <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4">Legal</h4>
-                <ul className="space-y-2 text-sm text-white/70">
-                  <li><a href="/privacy" className="hover:text-white transition">Privacy Policy</a></li>
-                  <li><a href="/terms" className="hover:text-white transition">Terms of Service</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-white/20 pt-8 text-center text-white/70 text-sm">
-              <p>&copy; 2026 ToolVerse. All rights reserved. Built for productivity and creativity.</p>
-              <p className="mt-2">Designed and Developed by <span className="font-semibold text-white">Sadeem</span></p>
-            </div>
-          </div>
-        </footer>
-      </div>
+      </Layout>
     </>
   );
 }
