@@ -213,7 +213,7 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-foreground/60 text-sm mb-5 leading-relaxed">{tool.description}</p>
-                    <div className="btn-primary-gradient text-white text-sm text-center py-2 rounded-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="btn-primary-gradient text-white text-sm text-center py-2 rounded-lg font-semibold mt-1">
                       Open Tool →
                     </div>
                   </div>
