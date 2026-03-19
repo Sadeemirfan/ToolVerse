@@ -109,33 +109,61 @@ export default function Home() {
       <Layout variant="home">
 
         {/* Hero Section */}
-        <section
-          className="relative py-16 md:py-24 overflow-hidden"
-          style={{
-            backgroundImage:
-              "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663439487236/k2fqQDXXUFzDUUCqwnbFsv/hero_background-7GkXA27LRv4FzPa6GQ7WZc.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+        <section className="relative py-20 md:py-32 overflow-hidden hero-gradient">
+          {/* Decorative Blobs */}
+          <div className="absolute top-0 left-0 w-72 h-72 bg-purple-600 rounded-full opacity-20 blur-3xl -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-400 rounded-full opacity-10 blur-3xl translate-x-1/3 translate-y-1/3" />
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-violet-500 rounded-full opacity-10 blur-3xl -translate-x-1/2 -translate-y-1/2" />
+
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-                Your All-in-One Digital Toolbox
+            <div className="text-center max-w-4xl mx-auto">
+              {/* Floating Logo */}
+              <div className="flex justify-center mb-8">
+                <div className="relative animate-float">
+                  <img src="/logo.png" alt="ToolVerse Logo" className="w-24 h-24 rounded-2xl shadow-2xl shadow-purple-500/50" />
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-500/20 to-cyan-400/20 blur-md" />
+                </div>
+              </div>
+
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm px-4 py-1.5 rounded-full mb-6 font-medium">
+                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                22 Free Tools — No Sign-Up Required
+              </div>
+
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Your All-in-One{" "}
+                <span className="gradient-text">Digital Toolbox</span>
               </h1>
-              <p className="text-lg text-foreground/80 mb-8">
-                Free, fast, and powerful online tools for productivity, SEO, development, and more. No sign-up required.
+              <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
+                Free, fast, and powerful online tools for productivity, SEO, development, and more.
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-                Explore Tools
-              </Button>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+                <a href="#tools" className="btn-primary-gradient text-white px-8 py-3 rounded-xl font-semibold text-lg shadow-lg shadow-purple-500/30">
+                  🚀 Explore Tools
+                </a>
+                <a href="/blog" className="glass text-white px-8 py-3 rounded-xl font-semibold text-lg hover:bg-white/15 transition">
+                  📖 Read Blog
+                </a>
+              </div>
+
+              {/* Stats */}
+              <div className="flex flex-wrap justify-center gap-8">
+                {[["22+", "Free Tools"], ["100%", "Private"], ["0", "Sign-up"]].map(([n, l]) => (
+                  <div key={l} className="text-center">
+                    <div className="text-3xl font-bold gradient-text">{n}</div>
+                    <div className="text-white/60 text-sm">{l}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* Search and Filter Section */}
-        <section id="tools" className="py-12 bg-secondary/20">
+        <section id="tools" className="py-14">
           <div className="container mx-auto px-4">
             <div className="mb-8">
               <div className="relative mb-6">
@@ -172,29 +200,25 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredTools.length > 0 ? (
                 filteredTools.map((tool) => (
-                  <Card
+                  <div
                     key={tool.id}
-                    className="p-6 hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-1 bg-white"
+                    className="card-glow bg-white rounded-2xl p-6 cursor-pointer group border border-[#E0E7FF]"
                     onClick={() => navigate(tool.href)}
                   >
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center text-primary group-hover:text-accent transition">
+                      <div className="relative w-14 h-14 icon-gradient rounded-xl flex items-center justify-center text-white shadow-lg flex-shrink-0">
                         {tool.icon}
                       </div>
-                      <div>
-                        <h3 className="text-lg font-bold text-foreground">{tool.name}</h3>
-                        <p className="text-sm text-muted-foreground">{tool.category}</p>
+                      <div className="min-w-0">
+                        <h3 className="text-base font-bold text-foreground leading-tight">{tool.name}</h3>
+                        <span className="inline-block text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full mt-1">{tool.category}</span>
                       </div>
                     </div>
-                    <p className="text-foreground/70 text-sm mb-4">{tool.description}</p>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                    >
-                      Open Tool
-                    </Button>
-                  </Card>
+                    <p className="text-foreground/60 text-sm mb-5 leading-relaxed">{tool.description}</p>
+                    <div className="btn-primary-gradient text-white text-sm text-center py-2 rounded-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                      Open Tool →
+                    </div>
+                  </div>
                 ))
               ) : (
                 <div className="col-span-full text-center py-12">
@@ -206,56 +230,49 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-20 md:py-28 hero-gradient">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-              Why Choose ToolVerse?
-            </h2>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                Why Choose <span className="gradient-text">ToolVerse?</span>
+              </h2>
+              <p className="text-white/60 text-lg max-w-xl mx-auto">Everything you need. Nothing you don't.</p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="p-8 text-center bg-secondary/20 border-0">
-                <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">100% Free</h3>
-                <p className="text-foreground/70">
-                  All tools are completely free to use. No hidden charges or premium plans.
-                </p>
-              </Card>
-              <Card className="p-8 text-center bg-secondary/20 border-0">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">No Sign-Up</h3>
-                <p className="text-foreground/70">
-                  Start using tools instantly. No account creation or personal data required.
-                </p>
-              </Card>
-              <Card className="p-8 text-center bg-secondary/20 border-0">
-                <div className="text-4xl mb-4">🔒</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Fast & Secure</h3>
-                <p className="text-foreground/70">
-                  All processing happens in your browser. Your data never leaves your device.
-                </p>
-              </Card>
+              {[{emoji: '💰', title: '100% Free Forever', desc: 'All tools are completely free. No hidden charges, no premium plans, no subscriptions.'},
+                {emoji: '⚡', title: 'Instant & No Sign-Up', desc: 'Start using any tool instantly. No account creation or personal data required ever.'},
+                {emoji: '🔒', title: 'Fast & Private', desc: 'All calculations happen in your browser. Your data never leaves your device.'}]
+                .map(({emoji, title, desc}) => (
+                <div key={title} className="glass rounded-2xl p-8 text-center hover:bg-white/15 transition-all duration-300">
+                  <div className="text-5xl mb-5">{emoji}</div>
+                  <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-accent/10">
+        <section className="py-20 md:py-28 bg-background">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready to Boost Your Productivity?
-            </h2>
-            <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-              Explore our collection of powerful tools designed to save you time and effort.
-            </p>
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white"
-              onClick={() => {
-                const toolsSection = document.getElementById("tools");
-                toolsSection?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              Browse All Tools
-            </Button>
+            <div className="max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-bold mb-5">
+                Ready to <span className="gradient-text">Boost Your Productivity?</span>
+              </h2>
+              <p className="text-foreground/60 text-lg mb-10">
+                Explore our collection of 22 powerful free tools designed to save your time and effort.
+              </p>
+              <button
+                className="btn-primary-gradient text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl shadow-purple-500/30"
+                onClick={() => {
+                  const toolsSection = document.getElementById("tools");
+                  toolsSection?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                🚀 Browse All 22 Tools
+              </button>
+            </div>
           </div>
         </section>
 

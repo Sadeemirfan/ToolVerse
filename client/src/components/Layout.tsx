@@ -54,26 +54,27 @@ function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#E0E7FF] shadow-sm">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => navigate("/")}
-          className="flex items-center gap-3 focus:outline-none"
+          className="flex items-center gap-2.5 focus:outline-none group"
           aria-label="Go to homepage"
         >
-          <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-            <Zap className="w-6 h-6 text-white" />
-          </div>
-          <span className="text-2xl font-bold text-primary hidden sm:block">ToolVerse</span>
+          <img src="/logo.png" alt="ToolVerse Logo" className="w-10 h-10 rounded-xl object-cover group-hover:scale-105 transition-transform" />
+          <span className="text-2xl font-bold gradient-text hidden sm:block">ToolVerse</span>
         </button>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <a href="/#tools" className="text-foreground hover:text-primary transition-colors">Tools</a>
-          <a href="/about" className="text-foreground hover:text-primary transition-colors">About</a>
-          <a href="/blog" className="text-foreground hover:text-primary transition-colors">Blog</a>
-          <a href="/contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+          <a href="/#tools" className="text-foreground/70 hover:text-primary transition-colors">Tools</a>
+          <a href="/about" className="text-foreground/70 hover:text-primary transition-colors">About</a>
+          <a href="/blog" className="text-foreground/70 hover:text-primary transition-colors">Blog</a>
+          <a href="/contact" className="text-foreground/70 hover:text-primary transition-colors">Contact</a>
+          <a href="/#tools" className="btn-primary-gradient text-white text-sm px-4 py-2 rounded-lg font-semibold shadow-sm">
+            🚀 All Tools
+          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -88,7 +89,7 @@ function SiteHeader() {
 
       {/* Mobile Dropdown */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-white">
+        <div className="md:hidden border-t border-[#E0E7FF] bg-white/95 backdrop-blur-md">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-4 text-sm font-medium">
             <a href="/#tools" className="text-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Tools</a>
             <a href="/about" className="text-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>About</a>
