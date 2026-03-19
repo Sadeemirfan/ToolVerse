@@ -1,4 +1,6 @@
 {
+  "buildCommand": "pnpm install && npx vite build",
+  "outputDirectory": "dist/public",
   "rewrites": [
     {
       "source": "/(.*)",
