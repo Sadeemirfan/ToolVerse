@@ -24,10 +24,24 @@ export default function Contact() {
 
     setIsSubmitting(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Netlify Form Submission logic
+      const body = new URLSearchParams({
+        "form-name": "contact",
+        ...formData,
+      }).toString();
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body,
+      });
+
+      if (!response.ok) throw new Error("Form submission failed");
+
       toast.success("Message sent successfully! We'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
-    } catch {
+    } catch (error) {
+      console.error("Form error:", error);
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -86,7 +100,16 @@ export default function Contact() {
                   <p className="text-gray-600 mb-8">
                     We read every message. Fill out the form below and we'll get back to you as soon as possible.
                   </p>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form 
+                    onSubmit={handleSubmit} 
+                    className="space-y-6"
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                  >
+                    {/* Hidden input for Netlify bot/form handling */}
+                    <input type="hidden" name="form-name" value="contact" />
+                    
                     <div>
                       <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">Your Name *</label>
                       <Input id="name" name="name" type="text" placeholder="John Doe" value={formData.name} onChange={handleChange} className="w-full" disabled={isSubmitting} />
