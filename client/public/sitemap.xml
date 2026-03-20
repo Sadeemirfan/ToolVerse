@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Home Page -->
   <url>
-    <loc>https://my-toolverse.netlify.app/</loc>
+    <loc>https://tool-verse-nu.vercel.app/</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,84 +10,84 @@
 
   <!-- Tool Pages -->
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/ai-detector</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/ai-detector</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/meta-generator</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/meta-generator</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/word-counter</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/word-counter</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/case-converter</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/case-converter</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/json-formatter</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/json-formatter</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/password-generator</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/password-generator</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/unit-converter</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/unit-converter</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/qr-generator</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/qr-generator</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/lorem-ipsum</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/lorem-ipsum</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/image-resizer</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/image-resizer</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/robots-generator</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/robots-generator</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/sitemap-generator</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/sitemap-generator</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -95,70 +95,70 @@
 
   <!-- New Tools -->
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/color-picker</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/color-picker</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/base64</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/base64</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/url-encoder</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/url-encoder</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/markdown-editor</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/markdown-editor</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/regex-tester</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/regex-tester</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/timestamp-converter</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/timestamp-converter</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/hash-generator</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/hash-generator</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/css-minifier</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/css-minifier</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/text-to-speech</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/text-to-speech</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/tools/invoice-generator</loc>
+    <loc>https://tool-verse-nu.vercel.app/tools/invoice-generator</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -166,97 +166,97 @@
 
   <!-- Blog Pages -->
   <url>
-    <loc>https://my-toolverse.netlify.app/blog</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/word-counter-academic-writing</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/word-counter-academic-writing</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/password-security-guide</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/password-security-guide</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/seo-meta-tags-guide</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/seo-meta-tags-guide</loc>
     <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/json-formatting-guide</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/json-formatting-guide</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/unit-conversion-guide</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/unit-conversion-guide</loc>
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/qr-codes-guide</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/qr-codes-guide</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/image-optimization-web-guide</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/image-optimization-web-guide</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/lorem-ipsum-modern-design</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/lorem-ipsum-modern-design</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/robots-txt-explained-seo</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/robots-txt-explained-seo</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/mastering-text-formatting-cases</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/mastering-text-formatting-cases</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/xml-sitemaps-google-indexing</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/xml-sitemaps-google-indexing</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/base64-encoding-guide</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/base64-encoding-guide</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/regex-guide-beginners</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/regex-guide-beginners</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/sha-hashing-explained</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/sha-hashing-explained</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-toolverse.netlify.app/blog/css-minification-performance</loc>
+    <loc>https://tool-verse-nu.vercel.app/blog/css-minification-performance</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -264,28 +264,28 @@
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://my-toolverse.netlify.app/about</loc>
+    <loc>https://tool-verse-nu.vercel.app/about</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/privacy</loc>
+    <loc>https://tool-verse-nu.vercel.app/privacy</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/terms</loc>
+    <loc>https://tool-verse-nu.vercel.app/terms</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://my-toolverse.netlify.app/contact</loc>
+    <loc>https://tool-verse-nu.vercel.app/contact</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
