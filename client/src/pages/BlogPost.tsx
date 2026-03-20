@@ -15,7 +15,7 @@ interface BlogPostContent {
 const blogContent: { [key: string]: BlogPostContent } = {
   "word-counter-academic-writing": {
     title: "How to Use Word Counter for Academic Writing",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 15, 2026",
     content: `
 ## Introduction
@@ -74,7 +74,7 @@ Our Word Counter tool is an essential resource for academic writing. Whether you
   },
   "password-security-guide": {
     title: "Password Security: Why Strong Passwords Matter",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 14, 2026",
     content: `
 ## Introduction
@@ -124,7 +124,7 @@ Strong passwords are essential for protecting your digital life. Use our Passwor
   },
   "seo-meta-tags-guide": {
     title: "SEO Meta Tags: The Complete Guide to Optimizing Your Website",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 13, 2026",
     content: `
 ## Introduction
@@ -181,7 +181,7 @@ Meta tags are a fundamental part of SEO. Use our Meta Tag Generator to create op
   },
   "json-formatting-guide": {
     title: "JSON Formatting Best Practices for Developers",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 12, 2026",
     content: `
 ## Introduction
@@ -230,7 +230,7 @@ Properly formatted JSON is essential for modern web development. Use our JSON Fo
   },
   "unit-conversion-guide": {
     title: "Unit Conversion Made Easy: A Complete Reference Guide",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 11, 2026",
     content: `
 ## Introduction
@@ -286,7 +286,7 @@ Unit conversion doesn't have to be complicated. Use our Unit Converter tool for 
   },
   "qr-codes-guide": {
     title: "QR Codes in 2026: Uses, Benefits, and Best Practices",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 10, 2026",
     content: `
 ## Introduction
@@ -346,7 +346,7 @@ QR codes are a powerful tool for connecting physical and digital experiences. Us
   },
   "image-optimization-web-guide": {
     title: "The Ultimate Guide to Image Optimization for Web",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 19, 2026",
     content: `
 ## Introduction
@@ -384,7 +384,7 @@ After resizing, compress the image to strip out unnecessary metadata and hidden 
 
 - **Identify the placement**: Where will this image go?
 - **Determine the max width**: Find out the maximum width of your content container.
-- **Use our Image Resizer**: Drop your photo into the ToolVerse Image Resizer, enter your target width, and download.
+- **Use our Image Resizer**: Drop your photo into the My ToolVerse Image Resizer, enter your target width, and download.
 - **Compress**: Run the resized image through a compression tool.
 
 ## Conclusion
@@ -394,7 +394,7 @@ Image optimization is not an optional step in web development; it is a necessity
   },
   "lorem-ipsum-modern-design": {
     title: "Why You Still Need Lorem Ipsum in Modern Web Design",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 18, 2026",
     content: `
 ## Introduction
@@ -423,7 +423,7 @@ While "content first" is a great philosophy, waiting for final copy before start
 
 ## Using Our Lorem Ipsum Generator
 
-The ToolVerse Lorem Ipsum Generator is built specifically for developers and designers:
+The My ToolVerse Lorem Ipsum Generator is built specifically for developers and designers:
 - **Customizable Output**: Choose how many paragraphs, sentences, or words you need.
 - **Instant Copy**: Generate and copy to your clipboard in one click.
 - **HTML Tags**: Automatically wrap your generated text in \`<p>\` tags for easy pasting directly into your code editor.
@@ -435,7 +435,7 @@ Lorem Ipsum remains an invaluable tool for designers and developers to keep proj
   },
   "robots-txt-explained-seo": {
     title: "Robots.txt Explained: How to Control Search Engine Crawlers",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 17, 2026",
     content: `
 ## Introduction
@@ -485,7 +485,7 @@ Controlling how search engines crawl your site is step one in technical SEO. By 
   },
   "mastering-text-formatting-cases": {
     title: "Mastering Text Formatting: When to Use Different Case Types",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 16, 2026",
     content: `
 ## Introduction
@@ -522,7 +522,7 @@ Manually retyping or editing text to fix the case is a massive waste of time and
 
 ## How Our Case Converter Helps
 
-The ToolVerse **Case Converter** automates this process entirely. You can paste thousands of words into the tool and, with a single click, convert everything to:
+The My ToolVerse **Case Converter** automates this process entirely. You can paste thousands of words into the tool and, with a single click, convert everything to:
 - UPPERCASE
 - lowercase
 - Title Case
@@ -538,7 +538,7 @@ Understanding when to use the right text case improves readability and adheres t
   },
   "xml-sitemaps-google-indexing": {
     title: "XML Sitemaps: The Secret to Faster Google Indexing",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 15, 2026",
     content: `
 ## Introduction
@@ -582,7 +582,7 @@ An XML sitemap is a non-negotiable component of technical SEO. It acts as a dire
   },
   "base64-encoding-guide": {
     title: "Base64 Encoding Explained: What It Is and When to Use It",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 19, 2026",
     content: `
 ## Introduction
@@ -625,7 +625,7 @@ Base64 is an essential encoding technique for modern web development. Use our fr
   },
   "regex-guide-beginners": {
     title: "Regular Expressions (Regex) for Beginners: A Practical Guide",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 19, 2026",
     content: `
 ## Introduction
@@ -686,7 +686,7 @@ Regular expressions take time to learn but pay off enormously. Start with simple
   },
   "sha-hashing-explained": {
     title: "SHA Hashing Explained: SHA-256, SHA-512 and Why They Matter",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 19, 2026",
     content: `
 ## Introduction
@@ -740,7 +740,7 @@ Understanding hash functions is essential for any developer working with securit
   },
   "css-minification-performance": {
     title: "CSS Minification: How to Speed Up Your Website with Smaller Stylesheets",
-    author: "ToolVerse Team",
+    author: "My ToolVerse Team",
     date: "March 19, 2026",
     content: `
 ## Introduction
@@ -815,7 +815,7 @@ export default function BlogPost() {
         type="article"
         author={post.author}
         publishedDate={post.date}
-        url={`https://my-toolverse.netlify.app/blog/${slug}`}
+        url={`https://my-my-toolverse.netlify.app/blog/${slug}`}
       />
       <Layout variant="page" title="Blog Post">
         {/* Post Hero */}

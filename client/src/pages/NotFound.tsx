@@ -15,8 +15,8 @@ export default function NotFound() {
     <>
       <SEOHead
         title="404 - Page Not Found"
-        description="The page you are looking for doesn't exist. It may have been moved or deleted. Return to ToolVerse home for free online tools."
-        keywords={["404", "page not found", "toolverse error"]}
+        description="The page you are looking for doesn't exist. It may have been moved or deleted. Return to My ToolVerse home for free online tools."
+        keywords={["404", "page not found", "my-toolverse error"]}
       />
       <Layout variant="page" title="404 Error">
         <div className="min-h-[70vh] w-full flex items-center justify-center p-4">

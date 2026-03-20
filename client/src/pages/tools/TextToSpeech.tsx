@@ -6,7 +6,7 @@ import { Volume2, Square, Play } from "lucide-react";
 import { toast } from "sonner";
 
 export default function TextToSpeechPage() {
-  const [text, setText] = useState("Hello! Welcome to ToolVerse. This is the Text to Speech tool. Type any text here and click Play to hear it spoken aloud.");
+  const [text, setText] = useState("Hello! Welcome to My ToolVerse. This is the Text to Speech tool. Type any text here and click Play to hear it spoken aloud.");
   const [rate, setRate] = useState(1);
   const [pitch, setPitch] = useState(1);
   const [volume, setVolume] = useState(1);

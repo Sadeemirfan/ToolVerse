@@ -1,4 +1,4 @@
-// ToolVerse Tools Library
+// My ToolVerse Tools Library
 // All tools are client-side only for fast, secure processing
 
 // 1. AI Content Detector

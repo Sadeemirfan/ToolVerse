@@ -6,9 +6,9 @@ export default function Privacy() {
     <>
       <SEOHead
         title="Privacy Policy"
-        description="ToolVerse Privacy Policy — learn how we protect your data. All tool processing is done client-side in your browser. We never store your personal data."
-        keywords={["privacy policy", "data protection", "toolverse privacy", "client-side processing"]}
-        url="https://my-toolverse.netlify.app/privacy"
+        description="My ToolVerse Privacy Policy — learn how we protect your data. All tool processing is done client-side in your browser. We never store your personal data."
+        keywords={["privacy policy", "data protection", "my-toolverse privacy", "client-side processing"]}
+        url="https://my-my-toolverse.netlify.app/privacy"
       />
       <Layout variant="page" title="Privacy Policy">
         <main className="container mx-auto px-4 py-12 max-w-4xl">
@@ -18,16 +18,16 @@ export default function Privacy() {
             <section>
               <h2 className="text-2xl font-bold text-foreground mb-4">1. Introduction</h2>
               <p>
-                Welcome to ToolVerse ("we," "us," "our," or "Company"). We are committed to protecting your privacy. This
+                Welcome to My ToolVerse ("we," "us," "our," or "Company"). We are committed to protecting your privacy. This
                 Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our
-                website my-toolverse.netlify.app (the "Site").
+                website my-my-toolverse.netlify.app (the "Site").
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-foreground mb-4">2. Information We Collect</h2>
               <p>
-                ToolVerse is designed to protect your privacy. We collect minimal information and process all data
+                My ToolVerse is designed to protect your privacy. We collect minimal information and process all data
                 client-side in your browser. We do not collect or store personal information unless you voluntarily
                 provide it.
               </p>
@@ -101,13 +101,13 @@ export default function Privacy() {
                 <li>The right to request deletion of your data</li>
                 <li>The right to opt-out of certain data processing</li>
               </ul>
-              <p className="mt-4">To exercise these rights, please contact us at privacy@toolverse.manus.space</p>
+              <p className="mt-4">To exercise these rights, please contact us at privacy@my-toolverse.manus.space</p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-foreground mb-4">9. Children's Privacy</h2>
               <p>
-                ToolVerse does not knowingly collect personal information from children under 13.
+                My ToolVerse does not knowingly collect personal information from children under 13.
               </p>
             </section>
 
@@ -123,9 +123,9 @@ export default function Privacy() {
               <h2 className="text-2xl font-bold text-foreground mb-4">11. Contact Us</h2>
               <p>If you have questions about this Privacy Policy, please contact us at:</p>
               <p className="mt-4">
-                <strong>ToolVerse</strong><br />
-                Email: privacy@toolverse.manus.space<br />
-                Website: my-toolverse.netlify.app
+                <strong>My ToolVerse</strong><br />
+                Email: privacy@my-toolverse.manus.space<br />
+                Website: my-my-toolverse.netlify.app
               </p>
             </section>
 

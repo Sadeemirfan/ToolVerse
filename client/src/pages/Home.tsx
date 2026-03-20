@@ -87,12 +87,12 @@ export default function Home() {
   const homepageSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "ToolVerse",
-    url: "https://my-toolverse.netlify.app",
+    name: "My ToolVerse",
+    url: "https://my-my-toolverse.netlify.app",
     description: "Your All-in-One Digital Toolbox - Free online tools for productivity, SEO, development, and more",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://my-toolverse.netlify.app/?search={search_term_string}",
+      target: "https://my-my-toolverse.netlify.app/?search={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
@@ -103,7 +103,7 @@ export default function Home() {
         title="Your All-in-One Digital Toolbox"
         description="Free online tools for productivity, SEO, development, and more. AI content detector, meta tag generator, word counter, and 10+ essential tools."
         keywords={["online tools", "SEO tools", "productivity tools", "free tools", "text tools", "developer tools", "utility tools"]}
-        url="https://my-toolverse.netlify.app"
+        url="https://my-my-toolverse.netlify.app"
         schema={homepageSchema}
       />
       <Layout variant="home">
@@ -119,7 +119,7 @@ export default function Home() {
               {/* Logo */}
               <div className="flex justify-center mb-6">
                 <div className="relative animate-float">
-                  <img src="/logo.png" alt="ToolVerse Logo" className="w-20 h-20 rounded-2xl shadow-xl shadow-purple-300/50" />
+                  <img src="/logo.png" alt="My ToolVerse Logo" className="w-20 h-20 rounded-2xl shadow-xl shadow-purple-300/50" />
                 </div>
               </div>
 
@@ -232,7 +232,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-3">
-                Why Choose <span className="gradient-text">ToolVerse?</span>
+                Why Choose <span className="gradient-text">My ToolVerse?</span>
               </h2>
               <p className="text-foreground/50 text-lg max-w-xl mx-auto">Everything you need, nothing you don't.</p>
             </div>

@@ -26,7 +26,7 @@ const SAMPLE_MD = `# Welcome to Markdown Editor
 ## Features
 - **Bold** and *italic* text
 - \`Inline code\` support
-- [Links](https://toolverse.com)
+- [Links](https://my-toolverse.com)
 
 ### How to Use
 Write your markdown on the left and see a **live preview** on the right!

@@ -44,7 +44,7 @@ export default function MetaGeneratorPage() {
       <div>
         <label className="text-sm font-semibold text-foreground mb-2 block">Page Title (50-60 chars)</label>
         <Input
-          placeholder="e.g., Best Free Online Tools | ToolVerse"
+          placeholder="e.g., Best Free Online Tools | My ToolVerse"
           value={title}
           onChange={(e) => setTitle(e.target.value.slice(0, 60))}
           maxLength={60}

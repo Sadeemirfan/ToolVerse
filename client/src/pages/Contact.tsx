@@ -52,9 +52,9 @@ export default function Contact() {
     <>
       <SEOHead
         title="Contact Us"
-        description="Get in touch with the ToolVerse team. Have questions, feedback, or bug reports? We'd love to hear from you."
-        keywords={["contact toolverse", "support", "feedback", "help", "reach us"]}
-        url="https://my-toolverse.netlify.app/contact"
+        description="Get in touch with the My ToolVerse team. Have questions, feedback, or bug reports? We'd love to hear from you."
+        keywords={["contact my-toolverse", "support", "feedback", "help", "reach us"]}
+        url="https://my-my-toolverse.netlify.app/contact"
       />
       <Layout variant="page" title="Contact">
         {/* Hero */}
@@ -79,7 +79,7 @@ export default function Contact() {
                     Have feedback about our tools? Found a bug? Want to suggest a new feature? We'd love to hear from you!
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    Your input helps us improve ToolVerse and create better tools for everyone.
+                    Your input helps us improve My ToolVerse and create better tools for everyone.
                   </p>
                 </div>
                 <div className="mt-12 p-6 bg-blue-50 rounded-lg">

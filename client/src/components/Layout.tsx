@@ -62,8 +62,8 @@ function SiteHeader() {
           className="flex items-center gap-2.5 focus:outline-none group"
           aria-label="Go to homepage"
         >
-          <img src="/logo.png" alt="ToolVerse Logo" className="w-10 h-10 rounded-xl object-cover group-hover:scale-105 transition-transform" />
-          <span className="text-2xl font-bold gradient-text hidden sm:block">ToolVerse</span>
+          <img src="/logo.png" alt="My ToolVerse Logo" className="w-10 h-10 rounded-xl object-cover group-hover:scale-105 transition-transform" />
+          <span className="text-2xl font-bold gradient-text hidden sm:block">My ToolVerse</span>
         </button>
 
         {/* Desktop Nav */}
@@ -128,7 +128,7 @@ function PageHeader({ title }: { title?: string }) {
           <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
             <Zap className="w-4 h-4 text-white" />
           </div>
-          <span className="text-lg font-bold text-primary hidden sm:block">ToolVerse</span>
+          <span className="text-lg font-bold text-primary hidden sm:block">My ToolVerse</span>
         </button>
       </div>
     </header>
@@ -146,7 +146,7 @@ function SiteFooter() {
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">ToolVerse</span>
+              <span className="text-xl font-bold">My ToolVerse</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
               Your all-in-one digital toolbox for productivity, SEO, and development. Free, fast, and private.
@@ -212,7 +212,7 @@ function SiteFooter() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-white/60">
-          <p>© 2026 ToolVerse. All rights reserved.</p>
+          <p>© 2026 My ToolVerse. All rights reserved.</p>
           <p>Designed and Developed by <span className="font-semibold text-white">Sadeem</span></p>
         </div>
       </div>

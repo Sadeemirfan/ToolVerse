@@ -17,7 +17,7 @@ export default function SEOHead({
   title,
   description,
   keywords = [],
-  image = "https://my-toolverse.netlify.app/og-image.png",
+  image = "https://my-my-toolverse.netlify.app/og-image.png",
   url = typeof window !== "undefined" ? window.location.href : "",
   type = "website",
   author,
@@ -25,21 +25,21 @@ export default function SEOHead({
   modifiedDate,
   schema,
 }: SEOHeadProps) {
-  const fullTitle = `${title} | ToolVerse`;
+  const fullTitle = `${title} | My ToolVerse`;
   const keywordString = keywords.join(", ");
 
   // Organization Schema
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "ToolVerse",
-    url: "https://my-toolverse.netlify.app",
-    logo: "https://my-toolverse.netlify.app/logo.png",
+    name: "My ToolVerse",
+    url: "https://my-my-toolverse.netlify.app",
+    logo: "https://my-my-toolverse.netlify.app/logo.png",
     description: "Your All-in-One Digital Toolbox - Free online tools for productivity, SEO, development, and more",
     sameAs: [
-      "https://twitter.com/toolverse",
-      "https://facebook.com/toolverse",
-      "https://linkedin.com/company/toolverse",
+      "https://twitter.com/my-toolverse",
+      "https://facebook.com/my-toolverse",
+      "https://linkedin.com/company/my-toolverse",
     ],
   };
 
@@ -69,7 +69,7 @@ export default function SEOHead({
     url: url,
     author: {
       "@type": "Person",
-      name: author || "ToolVerse",
+      name: author || "My ToolVerse",
     },
     datePublished: publishedDate,
     dateModified: modifiedDate || publishedDate,
@@ -96,17 +96,17 @@ export default function SEOHead({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="ToolVerse" />
+      <meta property="og:site_name" content="My ToolVerse" />
 
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@toolverse" />
+      <meta name="twitter:site" content="@my-toolverse" />
 
       {/* Additional Meta Tags */}
-      <meta name="author" content={author || "ToolVerse"} />
+      <meta name="author" content={author || "My ToolVerse"} />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />

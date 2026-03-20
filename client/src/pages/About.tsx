@@ -12,13 +12,13 @@ export default function About() {
     <>
       <SEOHead
         title="About Us"
-        description="Learn about ToolVerse — your all-in-one digital toolbox. Free online tools for productivity, SEO, text processing, and development. Built by Sadeem."
-        keywords={["about toolverse", "free online tools", "productivity tools", "SEO tools", "who we are"]}
-        url="https://my-toolverse.netlify.app/about"
+        description="Learn about My ToolVerse — your all-in-one digital toolbox. Free online tools for productivity, SEO, text processing, and development. Built by Sadeem."
+        keywords={["about my-toolverse", "free online tools", "productivity tools", "SEO tools", "who we are"]}
+        url="https://my-my-toolverse.netlify.app/about"
       />
       <Layout variant="page" title="About Us">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <h1 className="text-4xl font-bold text-primary mb-4">About ToolVerse</h1>
+          <h1 className="text-4xl font-bold text-primary mb-4">About My ToolVerse</h1>
           <p className="text-lg text-foreground/80 mb-12">
             Your all-in-one digital toolbox for productivity, creativity, and development.
           </p>
@@ -28,7 +28,7 @@ export default function About() {
             <section>
               <h2 className="text-3xl font-bold text-foreground mb-4">Our Mission</h2>
               <p className="text-foreground/80 mb-4">
-                At ToolVerse, we believe that everyone deserves access to powerful, free tools that enhance productivity
+                At My ToolVerse, we believe that everyone deserves access to powerful, free tools that enhance productivity
                 and creativity. Our mission is to provide a comprehensive collection of high-quality, easy-to-use online
                 tools that help individuals and businesses work smarter, not harder.
               </p>
@@ -40,7 +40,7 @@ export default function About() {
 
             {/* Why Choose Us Section */}
             <section>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Why Choose ToolVerse?</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Why Choose My ToolVerse?</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   { title: "100% Free", description: "All tools are completely free. No hidden charges, no premium plans, no subscriptions." },
@@ -66,7 +66,7 @@ export default function About() {
             {/* Our Tools Section */}
             <section>
               <h2 className="text-3xl font-bold text-foreground mb-4">Our Tools</h2>
-              <p className="text-foreground/80 mb-6">ToolVerse offers a diverse collection of tools across multiple categories:</p>
+              <p className="text-foreground/80 mb-6">My ToolVerse offers a diverse collection of tools across multiple categories:</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
                   { category: "Text Tools", tools: "Word Counter, Case Converter, Lorem Ipsum Generator" },
@@ -86,7 +86,7 @@ export default function About() {
             <section>
               <h2 className="text-3xl font-bold text-foreground mb-4">Built with Modern Technology</h2>
               <p className="text-foreground/80 mb-6">
-                ToolVerse is built using cutting-edge web technologies to ensure the best performance and user experience:
+                My ToolVerse is built using cutting-edge web technologies to ensure the best performance and user experience:
               </p>
               <ul className="space-y-2 text-foreground/80">
                 {[
@@ -108,8 +108,8 @@ export default function About() {
               <h2 className="text-3xl font-bold text-foreground mb-4">Get in Touch</h2>
               <p className="text-foreground/80 mb-6">Have questions, suggestions, or feedback? We would love to hear from you!</p>
               <div className="space-y-2">
-                <p className="text-foreground"><strong>Email:</strong> support@toolverse.manus.space</p>
-                <p className="text-foreground"><strong>Website:</strong> my-toolverse.netlify.app</p>
+                <p className="text-foreground"><strong>Email:</strong> support@my-toolverse.com</p>
+                <p className="text-foreground"><strong>Website:</strong> my-my-toolverse.netlify.app</p>
               </div>
             </section>
 
@@ -117,7 +117,7 @@ export default function About() {
             <section className="text-center">
               <h2 className="text-2xl font-bold text-foreground mb-4">Ready to Explore Our Tools?</h2>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white" onClick={() => navigate("/")}>
-                Back to ToolVerse
+                Back to My ToolVerse
               </Button>
             </section>
           </div>
