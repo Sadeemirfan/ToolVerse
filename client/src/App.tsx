@@ -40,6 +40,9 @@ import YouTubeThumbnailPage from "./pages/tools/YouTubeThumbnail";
 import WaterIntakeCalculatorPage from "./pages/tools/WaterIntakeCalculator";
 import MacroCalculatorPage from "./pages/tools/MacroCalculator";
 import InflationCalculatorPage from "./pages/tools/InflationCalculator";
+import StudentLoanCalculatorPage from "./pages/tools/StudentLoanCalculator";
+import TwitterBioGeneratorPage from "./pages/tools/TwitterBioGenerator";
+import KeywordDensityPage from "./pages/tools/KeywordDensityAnalyzer";
 
 
 function Router() {
@@ -78,6 +81,9 @@ function Router() {
       <Route path="/tools/water-intake" component={WaterIntakeCalculatorPage} />
       <Route path="/tools/macro-calculator" component={MacroCalculatorPage} />
       <Route path="/tools/inflation-calculator" component={InflationCalculatorPage} />
+      <Route path="/tools/student-loan" component={StudentLoanCalculatorPage} />
+      <Route path="/tools/twitter-bio" component={TwitterBioGeneratorPage} />
+      <Route path="/tools/keyword-density" component={KeywordDensityPage} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/contact" component={Contact} />

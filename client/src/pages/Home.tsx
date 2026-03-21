@@ -30,6 +30,8 @@ import {
   Droplets,
   Beef,
   TrendingUp,
+  GraduationCap,
+  Twitter,
 } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -77,6 +79,9 @@ const tools: Tool[] = [
   { id: "water-intake", name: "Water Intake Calculator", description: "Calculate how much water you should drink daily based on your weight and lifestyle", icon: <Droplets className="w-8 h-8" />, category: "Health & Fitness Tools", keywords: "water intake calculator, daily water intake, hydration calculator, how much water should i drink", href: "/tools/water-intake" },
   { id: "macro-calculator", name: "Macro Nutrient Calculator", description: "Calculate your daily protein, carbs, and fat intake for your fitness goals", icon: <Beef className="w-8 h-8" />, category: "Health & Fitness Tools", keywords: "macro calculator, macronutrient calculator, protein carbs fat, TDEE, macro split", href: "/tools/macro-calculator" },
   { id: "inflation-calculator", name: "Inflation Calculator", description: "See how inflation erodes purchasing power and the real value of money over time", icon: <TrendingUp className="w-8 h-8" />, category: "Financial Tools", keywords: "inflation calculator, purchasing power calculator, real value of money, simple inflation", href: "/tools/inflation-calculator" },
+  { id: "student-loan", name: "Student Loan Calculator", description: "Calculate exactly how long it will take to pay off your student loan", icon: <GraduationCap className="w-8 h-8" />, category: "Financial Tools", keywords: "student loan calculator, loan payoff calculator, student loan repayment", href: "/tools/student-loan" },
+  { id: "twitter-bio", name: "Twitter/X Bio Generator", description: "Generate a catchy Twitter profile bio in seconds with proven templates", icon: <Twitter className="w-8 h-8" />, category: "Social Media Tools", keywords: "twitter bio generator, x bio generator, twitter profile bio ideas", href: "/tools/twitter-bio" },
+  { id: "keyword-density", name: "Keyword Density Analyzer", description: "Analyze keyword frequency and density in your content for better SEO", icon: <Search className="w-8 h-8" />, category: "SEO Tools", keywords: "keyword density analyzer, keyword frequency checker, content SEO analyzer", href: "/tools/keyword-density" },
 ];
 
 const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools", "Social Media Tools", "Health & Fitness Tools", "Financial Tools"];
