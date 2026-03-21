@@ -32,6 +32,8 @@ import {
   TrendingUp,
   GraduationCap,
   Twitter,
+  Dumbbell,
+  Thermometer,
 } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -82,6 +84,8 @@ const tools: Tool[] = [
   { id: "student-loan", name: "Student Loan Calculator", description: "Calculate exactly how long it will take to pay off your student loan", icon: <GraduationCap className="w-8 h-8" />, category: "Financial Tools", keywords: "student loan calculator, loan payoff calculator, student loan repayment", href: "/tools/student-loan" },
   { id: "twitter-bio", name: "Twitter/X Bio Generator", description: "Generate a catchy Twitter profile bio in seconds with proven templates", icon: <Twitter className="w-8 h-8" />, category: "Social Media Tools", keywords: "twitter bio generator, x bio generator, twitter profile bio ideas", href: "/tools/twitter-bio" },
   { id: "keyword-density", name: "Keyword Density Analyzer", description: "Analyze keyword frequency and density in your content for better SEO", icon: <Search className="w-8 h-8" />, category: "SEO Tools", keywords: "keyword density analyzer, keyword frequency checker, content SEO analyzer", href: "/tools/keyword-density" },
+  { id: "home-workout", name: "Home Workout Planner", description: "Get a free 7-day home workout plan — no equipment needed", icon: <Dumbbell className="w-8 h-8" />, category: "Health & Fitness Tools", keywords: "home workout planner, no equipment workout plan, bodyweight workout, free workout plan", href: "/tools/home-workout" },
+  { id: "temperature", name: "Temperature Converter", description: "Convert between Celsius, Fahrenheit, and Kelvin instantly", icon: <Thermometer className="w-8 h-8" />, category: "Utility Tools", keywords: "temperature converter, celsius to fahrenheit, fahrenheit to celsius, kelvin", href: "/tools/temperature" },
 ];
 
 const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools", "Social Media Tools", "Health & Fitness Tools", "Financial Tools"];

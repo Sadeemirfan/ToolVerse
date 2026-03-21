@@ -43,6 +43,8 @@ import InflationCalculatorPage from "./pages/tools/InflationCalculator";
 import StudentLoanCalculatorPage from "./pages/tools/StudentLoanCalculator";
 import TwitterBioGeneratorPage from "./pages/tools/TwitterBioGenerator";
 import KeywordDensityPage from "./pages/tools/KeywordDensityAnalyzer";
+import HomeWorkoutPlannerPage from "./pages/tools/HomeWorkoutPlanner";
+import TemperatureConverterPage from "./pages/tools/TemperatureConverter";
 
 
 function Router() {
@@ -84,6 +86,8 @@ function Router() {
       <Route path="/tools/student-loan" component={StudentLoanCalculatorPage} />
       <Route path="/tools/twitter-bio" component={TwitterBioGeneratorPage} />
       <Route path="/tools/keyword-density" component={KeywordDensityPage} />
+      <Route path="/tools/home-workout" component={HomeWorkoutPlannerPage} />
+      <Route path="/tools/temperature" component={TemperatureConverterPage} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/contact" component={Contact} />
