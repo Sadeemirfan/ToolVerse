@@ -27,6 +27,7 @@ import {
   Receipt,
   Hash,
   Youtube,
+  Droplets,
 } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -71,9 +72,10 @@ const tools: Tool[] = [
   // ── Phase 1 New Tools ──
   { id: "hashtag-generator", name: "Hashtag Generator", description: "Generate the best TikTok, Instagram & Reels hashtags for your niche", icon: <Hash className="w-8 h-8" />, category: "Social Media Tools", keywords: "tiktok hashtags, hashtag generator, viral hashtags, fyp, instagram hashtags", href: "/tools/hashtag-generator" },
   { id: "youtube-thumbnail", name: "YouTube Thumbnail Downloader", description: "Download HD thumbnails from any YouTube video for free", icon: <Youtube className="w-8 h-8" />, category: "Social Media Tools", keywords: "youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail hd", href: "/tools/youtube-thumbnail" },
+  { id: "water-intake", name: "Water Intake Calculator", description: "Calculate how much water you should drink daily based on your weight and lifestyle", icon: <Droplets className="w-8 h-8" />, category: "Health & Fitness Tools", keywords: "water intake calculator, daily water intake, hydration calculator, how much water should i drink", href: "/tools/water-intake" },
 ];
 
-const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools", "Social Media Tools"];
+const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools", "Social Media Tools", "Health & Fitness Tools"];
 
 
 export default function Home() {
