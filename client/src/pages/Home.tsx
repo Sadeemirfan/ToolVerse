@@ -26,6 +26,7 @@ import {
   Volume2,
   Receipt,
   Hash,
+  Youtube,
 } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -69,6 +70,7 @@ const tools: Tool[] = [
 
   // ── Phase 1 New Tools ──
   { id: "hashtag-generator", name: "Hashtag Generator", description: "Generate the best TikTok, Instagram & Reels hashtags for your niche", icon: <Hash className="w-8 h-8" />, category: "Social Media Tools", keywords: "tiktok hashtags, hashtag generator, viral hashtags, fyp, instagram hashtags", href: "/tools/hashtag-generator" },
+  { id: "youtube-thumbnail", name: "YouTube Thumbnail Downloader", description: "Download HD thumbnails from any YouTube video for free", icon: <Youtube className="w-8 h-8" />, category: "Social Media Tools", keywords: "youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail hd", href: "/tools/youtube-thumbnail" },
 ];
 
 const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools", "Social Media Tools"];

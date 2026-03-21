@@ -36,6 +36,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import HashtagGeneratorPage from "./pages/tools/HashtagGenerator";
+import YouTubeThumbnailPage from "./pages/tools/YouTubeThumbnail";
 
 
 function Router() {
@@ -70,6 +71,7 @@ function Router() {
       <Route path="/tools/text-to-speech" component={TextToSpeechPage} />
       <Route path="/tools/invoice-generator" component={InvoiceGeneratorPage} />
       <Route path="/tools/hashtag-generator" component={HashtagGeneratorPage} />
+      <Route path="/tools/youtube-thumbnail" component={YouTubeThumbnailPage} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/contact" component={Contact} />
