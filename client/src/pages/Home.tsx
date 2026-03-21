@@ -25,6 +25,7 @@ import {
   Code2,
   Volume2,
   Receipt,
+  Hash,
 } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -65,9 +66,12 @@ const tools: Tool[] = [
   { id: "css-minifier", name: "CSS Minifier & Beautifier", description: "Minify or beautify CSS to optimize your stylesheets", icon: <Code2 className="w-8 h-8" />, category: "Developer Tools", keywords: "css minifier, css beautifier, compress css, format css", href: "/tools/css-minifier" },
   { id: "text-to-speech", name: "Text to Speech", description: "Convert text to audio with adjustable speed and pitch", icon: <Volume2 className="w-8 h-8" />, category: "Utility Tools", keywords: "text to speech, tts, read aloud, voice generator", href: "/tools/text-to-speech" },
   { id: "invoice-generator", name: "Invoice Generator", description: "Create and download professional invoices as PDF", icon: <Receipt className="w-8 h-8" />, category: "Utility Tools", keywords: "invoice generator, free invoice maker, pdf invoice", href: "/tools/invoice-generator" },
+
+  // ── Phase 1 New Tools ──
+  { id: "hashtag-generator", name: "Hashtag Generator", description: "Generate the best TikTok, Instagram & Reels hashtags for your niche", icon: <Hash className="w-8 h-8" />, category: "Social Media Tools", keywords: "tiktok hashtags, hashtag generator, viral hashtags, fyp, instagram hashtags", href: "/tools/hashtag-generator" },
 ];
 
-const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools"];
+const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools", "Social Media Tools"];
 
 
 export default function Home() {
