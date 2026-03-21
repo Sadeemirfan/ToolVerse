@@ -28,6 +28,8 @@ import {
   Hash,
   Youtube,
   Droplets,
+  Beef,
+  TrendingUp,
 } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -73,9 +75,11 @@ const tools: Tool[] = [
   { id: "hashtag-generator", name: "Hashtag Generator", description: "Generate the best TikTok, Instagram & Reels hashtags for your niche", icon: <Hash className="w-8 h-8" />, category: "Social Media Tools", keywords: "tiktok hashtags, hashtag generator, viral hashtags, fyp, instagram hashtags", href: "/tools/hashtag-generator" },
   { id: "youtube-thumbnail", name: "YouTube Thumbnail Downloader", description: "Download HD thumbnails from any YouTube video for free", icon: <Youtube className="w-8 h-8" />, category: "Social Media Tools", keywords: "youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail hd", href: "/tools/youtube-thumbnail" },
   { id: "water-intake", name: "Water Intake Calculator", description: "Calculate how much water you should drink daily based on your weight and lifestyle", icon: <Droplets className="w-8 h-8" />, category: "Health & Fitness Tools", keywords: "water intake calculator, daily water intake, hydration calculator, how much water should i drink", href: "/tools/water-intake" },
+  { id: "macro-calculator", name: "Macro Nutrient Calculator", description: "Calculate your daily protein, carbs, and fat intake for your fitness goals", icon: <Beef className="w-8 h-8" />, category: "Health & Fitness Tools", keywords: "macro calculator, macronutrient calculator, protein carbs fat, TDEE, macro split", href: "/tools/macro-calculator" },
+  { id: "inflation-calculator", name: "Inflation Calculator", description: "See how inflation erodes purchasing power and the real value of money over time", icon: <TrendingUp className="w-8 h-8" />, category: "Financial Tools", keywords: "inflation calculator, purchasing power calculator, real value of money, simple inflation", href: "/tools/inflation-calculator" },
 ];
 
-const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools", "Social Media Tools", "Health & Fitness Tools"];
+const categories = ["All", "Text Tools", "Developer Tools", "SEO Tools", "Utility Tools", "Social Media Tools", "Health & Fitness Tools", "Financial Tools"];
 
 
 export default function Home() {

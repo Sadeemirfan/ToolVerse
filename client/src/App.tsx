@@ -38,6 +38,8 @@ import Contact from "./pages/Contact";
 import HashtagGeneratorPage from "./pages/tools/HashtagGenerator";
 import YouTubeThumbnailPage from "./pages/tools/YouTubeThumbnail";
 import WaterIntakeCalculatorPage from "./pages/tools/WaterIntakeCalculator";
+import MacroCalculatorPage from "./pages/tools/MacroCalculator";
+import InflationCalculatorPage from "./pages/tools/InflationCalculator";
 
 
 function Router() {
@@ -74,6 +76,8 @@ function Router() {
       <Route path="/tools/hashtag-generator" component={HashtagGeneratorPage} />
       <Route path="/tools/youtube-thumbnail" component={YouTubeThumbnailPage} />
       <Route path="/tools/water-intake" component={WaterIntakeCalculatorPage} />
+      <Route path="/tools/macro-calculator" component={MacroCalculatorPage} />
+      <Route path="/tools/inflation-calculator" component={InflationCalculatorPage} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/contact" component={Contact} />
